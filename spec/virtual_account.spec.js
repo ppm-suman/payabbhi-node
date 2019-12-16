@@ -17,7 +17,9 @@ describe('virtual_accounts' , function(){
         email:"test@example.com",
         contact_no:9999999999,
         description:"virtual_payment",
-        collection_methods:["bank_account"],
+        collection_methods:{ upi: { amount: 1000 },
+                             bank_account: ""
+                           },
         notification_method:"both",
         customer_notification_by:"platform",
         notes:{
